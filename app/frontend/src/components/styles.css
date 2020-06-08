@@ -1,0 +1,63 @@
+.index-item {
+  width: 100%;
+}
+
+.index-item:hover {
+  background-color: aliceblue;
+}
+
+.index-selected {
+  background-color: yellow;
+}
+
+.index-wrapper {
+  width: 200px;
+  /* border: solid 1px; */
+  text-align: center;
+}
+
+.index-title {
+  background-color: #f5f5f5;
+  color: red;
+}
+
+.index-position {
+  margin-top: 100px;
+}
+
+.handler-position {
+  margin-top: 100px;
+  margin-left: 30px;
+  width: 80%;
+}
+
+.container {
+  display: flex;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 30px;
+}
+
+.handler-container {
+  text-align: center;
+}
+
+.handler-description {
+  text-align: left;
+  margin: 30px;
+}
+
+.input-item {
+  margin: 10px;
+}
+
+.calculate-button {
+  margin: 20px;
+}
+
+.calculate-result {
+  font-size: 30px;
+  margin: 30px;
+}

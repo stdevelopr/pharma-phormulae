@@ -1,0 +1,14 @@
+{
+  "f1": {
+    "name": "formula 1",
+    "description": "Calculates a+b",
+    "variables": ["a", "b"],
+    "function_name": "f1"
+  },
+  "f2": {
+    "name": "formula 2",
+    "description": "Calculates a*b*c",
+    "variables": ["a", "b", "c"],
+    "function_name": "f2"
+  }
+}
