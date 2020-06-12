@@ -46,7 +46,7 @@ def dose_diluicao():
 def dose_insulina():
     doseinsulina = float(request.args.get('doseinsulina'))
     qtsdias = float(request.args.get('qstdias'))
-    uiampola = float(request.args.get('qstdias'))
+    uiampola = float(request.args.get('uiampola'))
     msg = formulas['dias insulina']['resp_result']
     resp = dose_insulina_func(doseinsulina, qtsdias, uiampola)
     return jsonify(msg+str(resp))
