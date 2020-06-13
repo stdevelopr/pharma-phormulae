@@ -27,26 +27,35 @@ def formulas_ref():
 
 @app.route("/dose_medicamento")
 def dose_medicamento():
-    dosequequero = float(request.args.get('dosequequero'))
-    concentracaonofrasco = float(request.args.get('concentracaonofrasco'))
+    try:
+        dosequequero = float(request.args.get('dosequequero'))
+        concentracaonofrasco = float(request.args.get('concentracaonofrasco'))
+    except:
+        return jsonify("Algo de errado aconteceu. Verifique os dados de entrada...")
     msg = formulas['dose de diluição 2']['resp_result']
     resp = dose_medicamento_func(dosequequero, concentracaonofrasco)
     return jsonify(msg+str(resp))
 
 @app.route("/dose_diluicao")
 def dose_diluicao():
-    dosequequero = float(request.args.get('dosequequero'))
-    concentracaonofrasco = float(request.args.get('concentracaonofrasco'))
-    mlnofrasco = float(request.args.get('mlnofrasco'))
+    try:
+        dosequequero = float(request.args.get('dosequequero'))
+        concentracaonofrasco = float(request.args.get('concentracaonofrasco'))
+        mlnofrasco = float(request.args.get('mlnofrasco'))
+    except:
+        return jsonify("Algo de errado aconteceu. Verifique os dados de entrada...")
     msg = formulas['dose de diluição']['resp_result']
     resp = dose_diluicao_func(dosequequero, concentracaonofrasco, mlnofrasco)
     return jsonify(msg+str(resp))
 
 @app.route("/dose_insulina")
 def dose_insulina():
-    doseinsulina = float(request.args.get('doseinsulina'))
-    qtsdias = float(request.args.get('qstdias'))
-    uiampola = float(request.args.get('uiampola'))
+    try:
+        doseinsulina = float(request.args.get('doseinsulina'))
+        qtsdias = float(request.args.get('qstdias'))
+        uiampola = float(request.args.get('uiampola'))
+    except:
+        return jsonify("Algo de errado aconteceu. Verifique os dados de entrada...")
     msg = formulas['dias insulina']['resp_result']
     resp = dose_insulina_func(doseinsulina, qtsdias, uiampola)
     return jsonify(msg+str(resp))

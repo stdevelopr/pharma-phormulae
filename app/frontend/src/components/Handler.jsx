@@ -25,7 +25,7 @@ const Handler = ({ referenceItemDict }) => {
     // console.log(varName);
     let varValue = e.target.value;
     dict = { ...variables };
-    dict[varName] = parseFloat(varValue);
+    dict[varName] = varValue;
     setVariables(dict);
   };
 
@@ -56,7 +56,12 @@ const Handler = ({ referenceItemDict }) => {
               {/* <div>{var_name}</div> */}
               <div>{variable[var_name]["description"]}</div>
               <input
+                type="number"
+                // pattern="[0-9.]*"
+                step="0.01"
+                // placeholder="1.0"
                 varname={var_name}
+                min="0"
                 value={variables[var_name] ? variables[var_name] : ""}
                 onChange={updateVariables}
               />
